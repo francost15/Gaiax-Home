@@ -1,0 +1,482 @@
+<section id="precios" class="py-16 md:py-24 bg-gradient-to-b from-white to-gray-50 relative overflow-hidden">
+  <!-- Elementos decorativos (solo visibles en desktop) -->
+  <div class="absolute top-0 left-0 w-full h-full overflow-hidden z-0 opacity-70 hidden md:block">
+    <div class="pricing-shape shape1"></div>
+    <div class="pricing-shape shape2"></div>
+    <div class="pricing-shape shape3"></div>
+  </div>
+
+  <div class="container relative z-10 px-4 sm:px-6 mx-auto">
+    <div class="max-w-3xl mx-auto text-center mb-8 md:mb-16">
+      <h2 class="heading-2 text-gray-900 mb-4 md:mb-6 text-3xl md:text-4xl font-bold">
+        Precios accesibles 
+      </h2>
+      <p class="body-large text-gray-600 max-w-2xl mx-auto text-base md:text-lg">
+        Elige el plan que mejor se adapte a tu equipo. Sin sorpresas ni cargos ocultos.
+      </p>
+    </div>
+
+    <!-- Diseño responsive con 1 columna en móvil, 2 en tablet, 3 en desktop -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 max-w-6xl mx-auto">
+      <!-- Plan Inicial -->
+      <div class="pricing-card basic relative group">
+        <div class="absolute inset-0 bg-gradient-to-b from-transparent to-gray-100 rounded-2xl transform group-hover:-translate-y-2 transition-all duration-500"></div>
+        <div class="relative z-10 bg-white rounded-xl p-6 md:p-8 shadow-lg group-hover:shadow-xl transition-all duration-300 border border-gray-100 h-full flex flex-col">
+          <div class="pricing-icon-container mb-6">
+            <div class="pricing-icon basic">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+                <path d="M2 17l10 5 10-5"></path>
+                <path d="M2 12l10 5 10-5"></path>
+              </svg>
+            </div>
+          </div>
+          <h3 class="text-xl md:text-2xl font-semibold text-gray-900 mb-4">Inicial</h3>
+          <div class="flex items-baseline mb-1">
+            <span class="text-4xl md:text-5xl font-bold text-gray-900">$9</span>
+            <span class="text-gray-600 ml-2 text-sm md:text-base">/usuario/mes</span>
+          </div>
+          <p class="text-xs md:text-sm text-gray-500 mb-4 md:mb-6">Facturación anual o $12 mensual</p>
+          <p class="body-medium text-gray-600 mb-4 md:mb-6 text-sm md:text-base">
+            Perfecto para equipos pequeños que están comenzando
+          </p>
+          <ul class="space-y-3 md:space-y-4 mb-6 md:mb-8 text-sm md:text-base">
+            <li class="flex items-start">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-primary mr-3 flex-shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+              </svg>
+              <span class="text-gray-600">Hasta 25 usuarios</span>
+            </li>
+            <li class="flex items-start">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-primary mr-3 flex-shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+              </svg>
+              <span class="text-gray-600">Rutas de aprendizaje básicas</span>
+            </li>
+            <li class="flex items-start">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-primary mr-3 flex-shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+              </svg>
+              <span class="text-gray-600">Biblioteca de contenido estándar</span>
+            </li>
+            <li class="flex items-start">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-primary mr-3 flex-shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+              </svg>
+              <span class="text-gray-600">Soporte por correo electrónico</span>
+            </li>
+          </ul>
+          <div class="mt-auto">
+            <a href="#contacto" class="btn-pricing basic w-full py-3 text-base font-medium">
+              Iniciar Prueba Gratuita
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Plan Profesional -->
+      <div class="pricing-card pro relative group md:transform md:scale-105 md:z-20">
+        <!-- Etiqueta flotante solo visible en pantallas md+ -->
+        <div class="absolute -top-5 left-1/2 transform -translate-x-1/2 bg-primary text-white text-center py-1 px-4 rounded-full text-sm font-medium shadow-lg hidden md:block">
+          Más Popular
+        </div>
+        <!-- Para móviles, la etiqueta está dentro de la tarjeta -->
+        <div class="absolute inset-0 bg-gradient-to-b from-primary/5 to-primary/20 rounded-2xl transform group-hover:-translate-y-2 transition-all duration-500"></div>
+        <div class="relative z-10 bg-white rounded-xl p-6 md:p-8 shadow-xl group-hover:shadow-2xl transition-all duration-300 border-2 border-primary h-full flex flex-col">
+          <!-- Etiqueta para móviles -->
+          <div class="md:hidden bg-primary text-white text-center py-1 px-3 rounded-full text-xs font-medium shadow-sm w-fit mb-3">
+            Más Popular
+          </div>
+          <div class="pricing-icon-container mb-6">
+            <div class="pricing-icon pro">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+              </svg>
+            </div>
+          </div>
+          <h3 class="text-xl md:text-2xl font-semibold text-gray-900 mb-4">Profesional</h3>
+          <div class="flex items-baseline mb-1">
+            <span class="text-4xl md:text-5xl font-bold text-gray-900">$19</span>
+            <span class="text-gray-600 ml-2 text-sm md:text-base">/usuario/mes</span>
+          </div>
+          <p class="text-xs md:text-sm text-gray-500 mb-4 md:mb-6">Facturación anual o $25 mensual</p>
+          <p class="body-medium text-gray-600 mb-4 md:mb-6 text-sm md:text-base">
+            Ideal para organizaciones en crecimiento
+          </p>
+          <ul class="space-y-3 md:space-y-4 mb-6 md:mb-8 text-sm md:text-base">
+            <li class="flex items-start">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-primary mr-3 flex-shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+              </svg>
+              <span class="text-gray-600">Hasta 100 usuarios</span>
+            </li>
+            <li class="flex items-start">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-primary mr-3 flex-shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+              </svg>
+              <span class="text-gray-600">Rutas de aprendizaje avanzadas</span>
+            </li>
+            <li class="flex items-start">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-primary mr-3 flex-shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+              </svg>
+              <span class="text-gray-600">Biblioteca de contenido completa</span>
+            </li>
+            <li class="flex items-start">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-primary mr-3 flex-shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+              </svg>
+              <span class="text-gray-600">Soporte prioritario</span>
+            </li>
+            <li class="flex items-start">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-primary mr-3 flex-shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+              </svg>
+              <span class="text-gray-600">Análisis avanzados</span>
+            </li>
+          </ul>
+          <div class="mt-auto">
+            <a href="#contacto" class="btn-pricing pro w-full py-3 text-base font-medium">
+              Iniciar Prueba Gratuita
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Plan Empresarial -->
+      <div class="pricing-card enterprise relative group">
+        <div class="absolute inset-0 bg-gradient-to-b from-transparent to-gray-100 rounded-2xl transform group-hover:-translate-y-2 transition-all duration-500"></div>
+        <div class="relative z-10 bg-white rounded-xl p-6 md:p-8 shadow-lg group-hover:shadow-xl transition-all duration-300 border border-gray-100 h-full flex flex-col">
+          <div class="pricing-icon-container mb-6">
+            <div class="pricing-icon enterprise">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                <line x1="8" y1="12" x2="16" y2="12"></line>
+                <line x1="12" y1="16" x2="12" y2="16"></line>
+                <line x1="12" y1="8" x2="12" y2="8"></line>
+              </svg>
+            </div>
+          </div>
+          <h3 class="text-xl md:text-2xl font-semibold text-gray-900 mb-4">Empresarial</h3>
+          <p class="text-xs md:text-sm text-gray-500 mb-4 md:mb-6">Adaptado a tus necesidades específicas</p>
+          <p class="body-medium text-gray-600 mb-4 md:mb-6 text-sm md:text-base">
+            Para grandes organizaciones con necesidades específicas
+          </p>
+          <ul class="space-y-3 md:space-y-4 mb-6 md:mb-8 text-sm md:text-base">
+            <li class="flex items-start">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-primary mr-3 flex-shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+              </svg>
+              <span class="text-gray-600">Usuarios ilimitados</span>
+            </li>
+            <li class="flex items-start">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-primary mr-3 flex-shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+              </svg>
+              <span class="text-gray-600">Rutas de aprendizaje personalizadas</span>
+            </li>
+            <li class="flex items-start">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-primary mr-3 flex-shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+              </svg>
+              <span class="text-gray-600">Creación de contenido personalizado</span>
+            </li>
+            <li class="flex items-start">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-primary mr-3 flex-shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+              </svg>
+              <span class="text-gray-600">Soporte dedicado</span>
+            </li>
+            <li class="flex items-start">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-primary mr-3 flex-shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+              </svg>
+              <span class="text-gray-600">Integraciones avanzadas</span>
+            </li>
+            <li class="flex items-start">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-primary mr-3 flex-shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+              </svg>
+              <span class="text-gray-600">Marca blanca</span>
+            </li>
+          </ul>
+          <div class="mt-auto">
+            <a href="#contacto" class="btn-pricing enterprise w-full py-3 text-base font-medium">
+              Contactar Ventas
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+
+</section>
+
+<style>
+  /* Estilos para fondos y formas decorativas */
+  .pricing-shape {
+    position: absolute;
+    border-radius: 40%;
+    background: linear-gradient(45deg, rgba(169, 46, 255, 0.05), rgba(169, 46, 255, 0.1));
+    filter: blur(3px);
+  }
+  
+  .shape1 {
+    top: 10%;
+    left: 5%;
+    width: 400px;
+    height: 400px;
+    animation: float 15s infinite ease-in-out;
+  }
+  
+  .shape2 {
+    top: 60%;
+    right: 5%;
+    width: 300px;
+    height: 300px;
+    animation: float 20s infinite ease-in-out reverse;
+  }
+  
+  .shape3 {
+    bottom: 10%;
+    left: 15%;
+    width: 250px;
+    height: 250px;
+    animation: float 18s infinite ease-in-out 2s;
+  }
+  
+  @keyframes float {
+    0% { transform: translate(0, 0) rotate(0deg); }
+    50% { transform: translate(15px, -15px) rotate(5deg); }
+    100% { transform: translate(0, 0) rotate(0deg); }
+  }
+  
+  /* Estilos para los iconos de precios */
+  .pricing-icon-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  .pricing-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: relative;
+    color: white;
+    overflow: hidden;
+  }
+  
+  @media (min-width: 768px) {
+    .pricing-icon {
+      width: 60px;
+      height: 60px;
+    }
+  }
+  
+  .pricing-icon::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    z-index: -1;
+  }
+  
+  .pricing-icon.basic::before {
+    background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  }
+  
+  .pricing-icon.pro::before {
+    background: linear-gradient(135deg, #a92eff, #6366f1);
+  }
+  
+  .pricing-icon.enterprise::before {
+    background: linear-gradient(135deg, #8b5cf6, #a855f7);
+  }
+  
+  /* Estilos para botones premium */
+  .btn-pricing {
+    position: relative;
+    overflow: hidden;
+    border-radius: 0.5rem;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    min-height: 44px; /* Altura mínima para táctil en móviles */
+  }
+  
+  .btn-pricing::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    transition: all 0.5s ease;
+  }
+  
+  .btn-pricing.basic {
+    color: #6366f1;
+    border: 1px solid #e0e7ff;
+    background-color: #f5f7ff;
+  }
+  
+  .btn-pricing.basic:hover {
+    color: white;
+    border-color: #6366f1;
+  }
+  
+  .btn-pricing.basic::before {
+    background: linear-gradient(90deg, #6366f1, #818cf8);
+    transform: translateX(-100%);
+  }
+  
+  .btn-pricing.basic:hover::before {
+    transform: translateX(0);
+  }
+  
+  .btn-pricing.pro {
+    color: white;
+    background: linear-gradient(90deg, #a92eff, #6366f1);
+    box-shadow: 0 4px 15px rgba(169, 46, 255, 0.3);
+  }
+  
+  .btn-pricing.pro:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(169, 46, 255, 0.4);
+  }
+  
+  .btn-pricing.enterprise {
+    color: #a855f7;
+    border: 1px solid #e0e7ff;
+    background-color: #f5f7ff;
+  }
+  
+  .btn-pricing.enterprise:hover {
+    color: white;
+    border-color: #a855f7;
+  }
+  
+  .btn-pricing.enterprise::before {
+    background: linear-gradient(90deg, #8b5cf6, #a855f7);
+    transform: translateX(-100%);
+  }
+  
+  .btn-pricing.enterprise:hover::before {
+    transform: translateX(0);
+  }
+  
+  /* Animaciones para las tarjetas */
+  @keyframes slide-up {
+    0% {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .animate-fade-in-up {
+    animation: slide-up 0.6s ease forwards;
+  }
+  
+  /* Efecto de "brillo" al pasar el cursor (solo en dispositivos que no son táctiles) */
+  @media (hover: hover) {
+    .pricing-card::after {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: linear-gradient(
+        to bottom right,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0.1) 50%,
+        rgba(255, 255, 255, 0) 100%
+      );
+      transform: rotate(30deg);
+      transition: transform 0.75s ease;
+      opacity: 0;
+      z-index: 1;
+      pointer-events: none;
+    }
+    
+    .pricing-card:hover::after {
+      opacity: 1;
+      transform: rotate(30deg) translate(50%, 50%);
+    }
+  }
+  
+  /* Ajustes para Responsive */
+  @media (max-width: 767px) {
+    .container {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+    
+    .heading-2 {
+      font-size: 1.75rem;
+      line-height: 1.3;
+    }
+    
+    .body-large {
+      font-size: 1rem;
+    }
+  }
+</style>
+
+<script>
+  // Animación al hacer scroll
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('animate-fade-in-up');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+
+  // Elementos a animar
+  const pricingCards = document.querySelectorAll('#precios .pricing-card');
+  pricingCards.forEach((card, index) => {
+    if (card instanceof HTMLElement) {
+      card.style.opacity = '0';
+      // Retraso escalonado diferente para móvil/desktop para mejor visualización
+      const delay = window.innerWidth < 768 ? index * 100 : index * 150;
+      card.style.animationDelay = `${delay}ms`;
+      observer.observe(card);
+    }
+  });
+  
+  // Animar el sello de garantía
+  const guaranteeBadge = document.querySelector('#precios .max-w-xl');
+  if (guaranteeBadge instanceof HTMLElement) {
+    guaranteeBadge.style.opacity = '0';
+    guaranteeBadge.style.animationDelay = '450ms';
+    observer.observe(guaranteeBadge);
+  }
+</script> 

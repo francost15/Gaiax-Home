@@ -1,0 +1,237 @@
+<header id="header" class="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-100">
+  <div class="container">
+    <div class="flex items-center justify-between h-24 gap-4">
+      <a href="/" class="flex items-center h-16">
+        <img
+          src="/logo.svg"
+          alt="Gaiax Logo"
+          class="w-auto h-20"
+          fetchpriority="high"
+        />
+      </a>
+
+      <nav class="hidden md:flex items-center space-x-8">
+        <a href="#features" class="text-base font-medium text-gray-600 hover:text-primary transition-colors hover-lift">
+          Características
+        </a>
+        <a href="#precios" class="text-base font-medium text-gray-600 hover:text-primary transition-colors hover-lift">
+          Precios
+        </a>
+        <a href="#contacto" class="text-base font-medium text-gray-600 hover:text-primary transition-colors hover-lift">
+          Contacto
+        </a>
+      </nav>
+
+      <div class="hidden md:block">
+        <a href="#contacto" class="btn btn-primary hover:bg-primary/70 transition-colors hover-lift">Agenda una demo</a>
+      </div>
+
+      <div class="md:hidden">
+        <button id="menuBtn" class="text-gray-600 hover:text-primary transition-colors p-2 relative z-50" aria-label="Menú">
+          <div class="burger-icon w-8 h-6 relative">
+            <span class="burger-line line-1"></span>
+            <span class="burger-line line-2"></span>
+            <span class="burger-line line-3"></span>
+          </div>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div id="mobileMenu" class="md:hidden fixed inset-0 z-40 bg-primary backdrop-blur-md transform -translate-y-full transition-transform duration-500 ease-in-out overflow-hidden h-[100vh] w-[100vw]">
+    <div class="container h-full flex flex-col justify-center items-center py-12">
+      <!-- Logo en el menú móvil -->
+      <div class="mb-12">
+        <img src="/logo-invertido.svg" alt="Gaiax Logo" class="w-auto h-16" loading="lazy" />
+      </div>
+      
+      <nav class="flex flex-col items-center space-y-8 py-6 w-full">
+        <a href="#features" class="mobile-link text-3xl font-bold text-white hover:text-gray-200 transition-all transform hover:scale-110 opacity-0 w-full text-center">
+          Características
+        </a>
+        <a href="#precios" class="mobile-link text-3xl font-bold text-white hover:text-gray-200 transition-all transform hover:scale-110 opacity-0 w-full text-center">
+          Precios
+        </a>
+        <a href="#contacto" class="mobile-link text-3xl font-bold text-white hover:text-gray-200 transition-all transform hover:scale-110 opacity-0 w-full text-center">
+          Contacto
+        </a>
+        
+        <div class="mt-12 opacity-0 mobile-link">
+          <a href="#contacto" class="bg-white text-primary hover:bg-gray-100 transition-colors transform hover:scale-105 text-xl px-10 py-5 rounded-full shadow-xl">
+            Agenda una demo
+          </a>
+        </div>
+      </nav>
+      
+      <!-- Decoraciones flotantes -->
+      <div class="absolute top-0 right-0 w-64 h-64 rounded-full bg-white/10 -translate-x-12 translate-y-12 blur-3xl animate-blob"></div>
+      <div class="absolute bottom-0 left-0 w-64 h-64 rounded-full bg-white/10 translate-x-12 -translate-y-12 blur-3xl animate-blob animation-delay-2000"></div>
+    </div>
+  </div>
+</header>
+
+<style>
+  /* Animación de las líneas del menú hamburguesa */
+  .burger-line {
+    @apply block absolute h-0.5 w-full bg-gray-600 transition-all duration-300 ease-in-out rounded-full;
+  }
+  
+  .line-1 {
+    top: 0;
+  }
+  
+  .line-2 {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  .line-3 {
+    bottom: 0;
+  }
+  
+  /* Estado activo del menú hamburguesa */
+  .burger-active .line-1 {
+    @apply bg-white;
+    transform: translateY(10px) rotate(45deg);
+  }
+  
+  .burger-active .line-2 {
+    @apply bg-white;
+    opacity: 0;
+  }
+  
+  .burger-active .line-3 {
+    @apply bg-white;
+    transform: translateY(-10px) rotate(-45deg);
+  }
+  
+  /* Estado activo del menú móvil */
+  .menu-active {
+    transform: translateY(0) !important;
+  }
+  
+  /* Animaciones para los enlaces móviles al aparecer */
+  @keyframes fadeSlideIn {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Animación para las burbujas decorativas */
+  @keyframes blob {
+    0% {
+      transform: translate(0px, 0px) scale(1);
+    }
+    33% {
+      transform: translate(30px, -50px) scale(1.1);
+    }
+    66% {
+      transform: translate(-20px, 20px) scale(0.9);
+    }
+    100% {
+      transform: translate(0px, 0px) scale(1);
+    }
+  }
+  
+  .animate-blob {
+    animation: blob 15s infinite alternate;
+  }
+  
+  .animation-delay-2000 {
+    animation-delay: 2s;
+  }
+  
+  /* Ajuste de z-index para el botón de menú */
+  #menuBtn.open {
+    @apply text-white;
+    z-index: 60;
+  }
+</style>
+
+<script>
+  // Toggle del menú móvil con animaciones
+  const menuBtn = document.getElementById('menuBtn');
+  const mobileMenu = document.getElementById('mobileMenu');
+  const burgerIcon = menuBtn?.querySelector('.burger-icon');
+  const mobileLinks = document.querySelectorAll('.mobile-link');
+  let menuOpen = false;
+  
+  if (menuBtn instanceof HTMLElement && 
+      mobileMenu instanceof HTMLElement && 
+      burgerIcon instanceof HTMLElement) {
+      
+    menuBtn.addEventListener('click', () => {
+      menuOpen = !menuOpen;
+      
+      // Animar el icono hamburguesa
+      burgerIcon.classList.toggle('burger-active');
+      
+      // Mostrar/ocultar el menú móvil con animación
+      mobileMenu.classList.toggle('menu-active');
+      
+      // Cambiar la apariencia del botón cuando el menú está abierto
+      menuBtn.classList.toggle('open');
+      
+      // Bloquear/desbloquear scroll cuando el menú está abierto
+      document.body.style.overflow = menuOpen ? 'hidden' : '';
+      
+      // Animar los enlaces con entrada escalonada
+      if (menuOpen) {
+        mobileLinks.forEach((link, index) => {
+          const linkElement = link as HTMLElement;
+          setTimeout(() => {
+            linkElement.style.animation = `fadeSlideIn 0.7s ease forwards`;
+            linkElement.style.opacity = '1';
+          }, 150 + (index * 120));
+        });
+      } else {
+        mobileLinks.forEach((link) => {
+          const linkElement = link as HTMLElement;
+          linkElement.style.animation = '';
+          linkElement.style.opacity = '0';
+        });
+      }
+    });
+  }
+
+  // Cerrar menú al hacer clic en enlaces
+  mobileLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      if (mobileMenu instanceof HTMLElement && 
+          burgerIcon instanceof HTMLElement && 
+          menuBtn instanceof HTMLElement) {
+        
+        // Restaurar estado cerrado
+        menuOpen = false;
+        mobileMenu.classList.remove('menu-active');
+        burgerIcon.classList.remove('burger-active');
+        menuBtn.classList.remove('open');
+        document.body.style.overflow = '';
+        
+        // Reiniciar animaciones
+        mobileLinks.forEach((link) => {
+          const linkElement = link as HTMLElement;
+          linkElement.style.animation = '';
+          linkElement.style.opacity = '0';
+        });
+      }
+    });
+  });
+
+  // Efecto de desplazamiento en la navegación
+  const header = document.getElementById('header');
+  if (header instanceof HTMLElement) {
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        header.classList.add('shadow-md');
+      } else {
+        header.classList.remove('shadow-md');
+      }
+    });
+  }
+</script> 

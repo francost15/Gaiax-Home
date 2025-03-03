@@ -1,0 +1,457 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="Preguntas Frecuentes | Gaiax" description="Encuentra respuestas a las preguntas más comunes sobre nuestra plataforma de capacitación para pymes.">
+  <Header />
+  
+  <main class="pt-20">
+    <section class="py-24 bg-gray-50">
+      <div class="container">
+        <div class="max-w-4xl mx-auto text-center mb-16">
+          <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+            Preguntas <span class="text-primary">Frecuentes</span>
+          </h1>
+          <div class="w-24 h-1 bg-primary mx-auto mb-8 rounded-full"></div>
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+            Encuentra respuestas a las preguntas más comunes sobre nuestra plataforma y servicios.
+          </p>
+        </div>
+        
+        <!-- Navegación por categorías -->
+        <div class="flex flex-wrap justify-center gap-4 mb-16">
+          <button class="faq-tab active px-6 py-3 rounded-full bg-white hover:bg-primary hover:text-white shadow-sm hover:shadow-md transition-all border border-gray-100 text-gray-800 font-medium hover:scale-105" data-target="general">
+            General
+          </button>
+          <button class="faq-tab px-6 py-3 rounded-full bg-white hover:bg-primary hover:text-white shadow-sm hover:shadow-md transition-all border border-gray-100 text-gray-800 font-medium hover:scale-105" data-target="plataforma">
+            Plataforma
+          </button>
+          <button class="faq-tab px-6 py-3 rounded-full bg-white hover:bg-primary hover:text-white shadow-sm hover:shadow-md transition-all border border-gray-100 text-gray-800 font-medium hover:scale-105" data-target="precios">
+            Precios
+          </button>
+          <button class="faq-tab px-6 py-3 rounded-full bg-white hover:bg-primary hover:text-white shadow-sm hover:shadow-md transition-all border border-gray-100 text-gray-800 font-medium hover:scale-105" data-target="soporte">
+            Soporte
+          </button>
+        </div>
+        
+        <div class="max-w-3xl mx-auto">
+          <!-- FAQ General -->
+          <div class="faq-category active" id="general">
+            <div class="space-y-6">
+              <div class="faq-item bg-white rounded-xl shadow-sm overflow-hidden">
+                <button class="faq-question w-full flex items-center justify-between p-6 text-left">
+                  <span class="text-lg font-medium text-gray-900">¿Qué es Gaiax?</span>
+                  <svg class="faq-icon w-6 h-6 transform transition-transform text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                  </svg>
+                </button>
+                <div class="faq-answer px-6 pb-6 pt-0 hidden">
+                  <p class="text-gray-600">
+                    Gaiax es una plataforma de capacitación en línea diseñada específicamente para pequeñas y medianas empresas. Ofrecemos rutas de aprendizaje personalizadas basadas en las necesidades específicas de cada empleado y organización, transformando el desarrollo del capital humano en una experiencia accesible, asequible y medible.
+                  </p>
+                </div>
+              </div>
+              
+              <div class="faq-item bg-white rounded-xl shadow-sm overflow-hidden">
+                <button class="faq-question w-full flex items-center justify-between p-6 text-left">
+                  <span class="text-lg font-medium text-gray-900">¿Cómo se diferencia Gaiax de otras plataformas de e-learning?</span>
+                  <svg class="faq-icon w-6 h-6 transform transition-transform text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                  </svg>
+                </button>
+                <div class="faq-answer px-6 pb-6 pt-0 hidden">
+                  <p class="text-gray-600">
+                    A diferencia de otras plataformas genéricas, Gaiax se enfoca específicamente en las necesidades de las pymes. Nuestro enfoque se distingue por:
+                  </p>
+                  <ul class="list-disc pl-5 mt-3 space-y-2 text-gray-600">
+                    <li>Rutas de aprendizaje adaptativas que evolucionan según el progreso de cada usuario</li>
+                    <li>Contenido relevante para desarrollar habilidades prácticas en el contexto de las pymes</li>
+                    <li>Análisis de datos y métricas diseñadas para demostrar el ROI de la capacitación</li>
+                    <li>Interfaz intuitiva que facilita la implementación sin necesidad de grandes recursos técnicos</li>
+                    <li>Planes accesibles que se adaptan al presupuesto de empresas pequeñas y medianas</li>
+                  </ul>
+                </div>
+              </div>
+              
+              <div class="faq-item bg-white rounded-xl shadow-sm overflow-hidden">
+                <button class="faq-question w-full flex items-center justify-between p-6 text-left">
+                  <span class="text-lg font-medium text-gray-900">¿Para qué tipo de empresas está diseñado Gaiax?</span>
+                  <svg class="faq-icon w-6 h-6 transform transition-transform text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                  </svg>
+                </button>
+                <div class="faq-answer px-6 pb-6 pt-0 hidden">
+                  <p class="text-gray-600">
+                    Gaiax está especialmente diseñado para pequeñas y medianas empresas (pymes) que buscan soluciones de capacitación accesibles y efectivas. Nuestra plataforma es ideal para organizaciones que:
+                  </p>
+                  <ul class="list-disc pl-5 mt-3 space-y-2 text-gray-600">
+                    <li>Tienen equipos de 5 a 500 empleados</li>
+                    <li>Buscan optimizar sus recursos de capacitación</li>
+                    <li>Necesitan desarrollar el talento interno sin grandes inversiones</li>
+                    <li>Quieren implementar programas de formación sin un departamento de RH extenso</li>
+                    <li>Desean una solución escalable que crezca con su empresa</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- FAQ Plataforma -->
+          <div class="faq-category hidden" id="plataforma">
+            <div class="space-y-6">
+              <div class="faq-item bg-white rounded-xl shadow-sm overflow-hidden">
+                <button class="faq-question w-full flex items-center justify-between p-6 text-left">
+                  <span class="text-lg font-medium text-gray-900">¿Qué tipos de cursos y contenidos ofrece la plataforma?</span>
+                  <svg class="faq-icon w-6 h-6 transform transition-transform text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                  </svg>
+                </button>
+                <div class="faq-answer px-6 pb-6 pt-0 hidden">
+                  <p class="text-gray-600">
+                    Gaiax ofrece una amplia variedad de contenidos, incluyendo:
+                  </p>
+                  <ul class="list-disc pl-5 mt-3 space-y-2 text-gray-600">
+                    <li>Habilidades técnicas específicas por industria</li>
+                    <li>Desarrollo de habilidades blandas (liderazgo, comunicación, trabajo en equipo)</li>
+                    <li>Cursos de marketing digital y ventas</li>
+                    <li>Capacitación en herramientas tecnológicas y digitales</li>
+                    <li>Desarrollo profesional y productividad</li>
+                    <li>Cumplimiento normativo y seguridad</li>
+                  </ul>
+                  <p class="text-gray-600 mt-3">
+                    Además, ofrecemos la posibilidad de crear y personalizar contenido adaptado a las necesidades específicas de tu empresa.
+                  </p>
+                </div>
+              </div>
+              
+              <div class="faq-item bg-white rounded-xl shadow-sm overflow-hidden">
+                <button class="faq-question w-full flex items-center justify-between p-6 text-left">
+                  <span class="text-lg font-medium text-gray-900">¿Cómo funciona la personalización de rutas de aprendizaje?</span>
+                  <svg class="faq-icon w-6 h-6 transform transition-transform text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                  </svg>
+                </button>
+                <div class="faq-answer px-6 pb-6 pt-0 hidden">
+                  <p class="text-gray-600">
+                    Nuestro sistema de personalización se basa en tres elementos clave:
+                  </p>
+                  <ol class="list-decimal pl-5 mt-3 space-y-2 text-gray-600">
+                    <li><strong>Evaluación inicial:</strong> Identificamos las habilidades existentes, brechas de conocimiento y objetivos de aprendizaje de cada empleado.</li>
+                    <li><strong>Algoritmo de recomendación:</strong> Basado en la evaluación, nuestro sistema sugiere una ruta de aprendizaje adaptada a las necesidades específicas.</li>
+                    <li><strong>Adaptación continua:</strong> A medida que el usuario avanza, el sistema ajusta la ruta según su progreso, rendimiento y retroalimentación.</li>
+                  </ol>
+                  <p class="text-gray-600 mt-3">
+                    Los administradores también pueden personalizar manualmente las rutas para alinearlas con objetivos específicos de la empresa o departamentos.
+                  </p>
+                </div>
+              </div>
+              
+              <div class="faq-item bg-white rounded-xl shadow-sm overflow-hidden">
+                <button class="faq-question w-full flex items-center justify-between p-6 text-left">
+                  <span class="text-lg font-medium text-gray-900">¿La plataforma funciona en dispositivos móviles?</span>
+                  <svg class="faq-icon w-6 h-6 transform transition-transform text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                  </svg>
+                </button>
+                <div class="faq-answer px-6 pb-6 pt-0 hidden">
+                  <p class="text-gray-600">
+                    Sí, Gaiax está completamente optimizado para dispositivos móviles. Nuestra plataforma es responsive y se adapta a cualquier tamaño de pantalla, permitiendo a los usuarios acceder a su formación desde smartphones y tablets.
+                  </p>
+                  <p class="text-gray-600 mt-3">
+                    Además, contamos con aplicaciones nativas para iOS y Android que ofrecen funcionalidades adicionales como:
+                  </p>
+                  <ul class="list-disc pl-5 mt-3 space-y-2 text-gray-600">
+                    <li>Acceso offline a contenidos descargados</li>
+                    <li>Notificaciones personalizadas</li>
+                    <li>Sincronización automática del progreso entre dispositivos</li>
+                    <li>Optimización del consumo de datos móviles</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- FAQ Precios -->
+          <div class="faq-category hidden" id="precios">
+            <div class="space-y-6">
+              <div class="faq-item bg-white rounded-xl shadow-sm overflow-hidden">
+                <button class="faq-question w-full flex items-center justify-between p-6 text-left">
+                  <span class="text-lg font-medium text-gray-900">¿Cuáles son los planes de precios disponibles?</span>
+                  <svg class="faq-icon w-6 h-6 transform transition-transform text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                  </svg>
+                </button>
+                <div class="faq-answer px-6 pb-6 pt-0 hidden">
+                  <p class="text-gray-600">
+                    Ofrecemos tres planes principales:
+                  </p>
+                  <ul class="mt-3 space-y-4 text-gray-600">
+                    <li>
+                      <strong class="text-gray-800">Plan Básico:</strong> Ideal para pequeñas empresas que inician su estrategia de capacitación. Incluye acceso a contenido esencial, rutas de aprendizaje básicas y reportes simples.
+                    </li>
+                    <li>
+                      <strong class="text-gray-800">Plan Business:</strong> Perfecto para empresas en crecimiento. Incluye contenido premium, personalización avanzada de rutas, análisis detallados y soporte prioritario.
+                    </li>
+                    <li>
+                      <strong class="text-gray-800">Plan Enterprise:</strong> Diseñado para medianas empresas con necesidades complejas. Ofrece contenido ilimitado, personalización completa, integraciones avanzadas, API accesible y gestor de cuenta dedicado.
+                    </li>
+                  </ul>
+                  <p class="text-gray-600 mt-3">
+                    Todos nuestros planes se facturan por usuario, con descuentos por volumen disponibles. Para obtener una cotización específica, te invitamos a contactar con nuestro equipo comercial.
+                  </p>
+                </div>
+              </div>
+              
+              <div class="faq-item bg-white rounded-xl shadow-sm overflow-hidden">
+                <button class="faq-question w-full flex items-center justify-between p-6 text-left">
+                  <span class="text-lg font-medium text-gray-900">¿Hay algún período de prueba disponible?</span>
+                  <svg class="faq-icon w-6 h-6 transform transition-transform text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                  </svg>
+                </button>
+                <div class="faq-answer px-6 pb-6 pt-0 hidden">
+                  <p class="text-gray-600">
+                    Sí, ofrecemos un período de prueba gratuito de 14 días para que puedas experimentar todos los beneficios de nuestra plataforma. Durante este período tendrás acceso a:
+                  </p>
+                  <ul class="list-disc pl-5 mt-3 space-y-2 text-gray-600">
+                    <li>Una selección de nuestros cursos más populares</li>
+                    <li>Herramientas de administración y seguimiento</li>
+                    <li>Funcionalidades de personalización de rutas de aprendizaje</li>
+                    <li>Informes básicos de progreso</li>
+                  </ul>
+                  <p class="text-gray-600 mt-3">
+                    No requerimos datos de pago para iniciar tu prueba gratuita, y recibirás una notificación antes de que finalice el período de prueba.
+                  </p>
+                </div>
+              </div>
+              
+              <div class="faq-item bg-white rounded-xl shadow-sm overflow-hidden">
+                <button class="faq-question w-full flex items-center justify-between p-6 text-left">
+                  <span class="text-lg font-medium text-gray-900">¿Ofrecen descuentos para organizaciones sin fines de lucro o instituciones educativas?</span>
+                  <svg class="faq-icon w-6 h-6 transform transition-transform text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                  </svg>
+                </button>
+                <div class="faq-answer px-6 pb-6 pt-0 hidden">
+                  <p class="text-gray-600">
+                    Sí, tenemos programas especiales para:
+                  </p>
+                  <ul class="list-disc pl-5 mt-3 space-y-2 text-gray-600">
+                    <li>Organizaciones sin fines de lucro registradas (descuento del 25%)</li>
+                    <li>Instituciones educativas (descuento del 30%)</li>
+                    <li>Emprendedores y startups en fase inicial (planes especiales de crecimiento)</li>
+                  </ul>
+                  <p class="text-gray-600 mt-3">
+                    Para solicitar un descuento, deberás proporcionar la documentación que acredite tu estatus como organización sin fines de lucro o institución educativa.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- FAQ Soporte -->
+          <div class="faq-category hidden" id="soporte">
+            <div class="space-y-6">
+              <div class="faq-item bg-white rounded-xl shadow-sm overflow-hidden">
+                <button class="faq-question w-full flex items-center justify-between p-6 text-left">
+                  <span class="text-lg font-medium text-gray-900">¿Qué tipo de soporte técnico ofrecen?</span>
+                  <svg class="faq-icon w-6 h-6 transform transition-transform text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                  </svg>
+                </button>
+                <div class="faq-answer px-6 pb-6 pt-0 hidden">
+                  <p class="text-gray-600">
+                    Ofrecemos varios niveles de soporte, dependiendo de tu plan:
+                  </p>
+                  <ul class="mt-3 space-y-3 text-gray-600">
+                    <li>
+                      <strong class="text-gray-800">Soporte básico (todos los planes):</strong> Chat en vivo y email con tiempo de respuesta de 24 horas, acceso a base de conocimientos y tutoriales.
+                    </li>
+                    <li>
+                      <strong class="text-gray-800">Soporte prioritario (planes Business y Enterprise):</strong> Tiempo de respuesta reducido (8 horas en días laborables), soporte telefónico en horario comercial.
+                    </li>
+                    <li>
+                      <strong class="text-gray-800">Soporte premium (plan Enterprise):</strong> Gestor de cuenta dedicado, tiempo de respuesta garantizado (4 horas), número de teléfono directo y soporte disponible 24/5.
+                    </li>
+                  </ul>
+                  <p class="text-gray-600 mt-3">
+                    Todos los clientes tienen acceso a nuestros webinars mensuales de mejores prácticas y actualizaciones de la plataforma.
+                  </p>
+                </div>
+              </div>
+              
+              <div class="faq-item bg-white rounded-xl shadow-sm overflow-hidden">
+                <button class="faq-question w-full flex items-center justify-between p-6 text-left">
+                  <span class="text-lg font-medium text-gray-900">¿Ofrecen capacitación para administradores de la plataforma?</span>
+                  <svg class="faq-icon w-6 h-6 transform transition-transform text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                  </svg>
+                </button>
+                <div class="faq-answer px-6 pb-6 pt-0 hidden">
+                  <p class="text-gray-600">
+                    Sí, proporcionamos capacitación completa para todos los administradores de la plataforma, que incluye:
+                  </p>
+                  <ul class="list-disc pl-5 mt-3 space-y-2 text-gray-600">
+                    <li>Sesión inicial de onboarding personalizada (90 minutos)</li>
+                    <li>Acceso a nuestra academia de administradores con cursos paso a paso</li>
+                    <li>Documentación detallada y guías de mejores prácticas</li>
+                    <li>Webinars mensuales con actualizaciones y nuevas funcionalidades</li>
+                  </ul>
+                  <p class="text-gray-600 mt-3">
+                    Los planes Business y Enterprise incluyen sesiones adicionales de capacitación personalizada y consultoría para optimizar el uso de la plataforma según las necesidades específicas de tu organización.
+                  </p>
+                </div>
+              </div>
+              
+              <div class="faq-item bg-white rounded-xl shadow-sm overflow-hidden">
+                <button class="faq-question w-full flex items-center justify-between p-6 text-left">
+                  <span class="text-lg font-medium text-gray-900">¿Cómo puedo contactar con el servicio de atención al cliente?</span>
+                  <svg class="faq-icon w-6 h-6 transform transition-transform text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                  </svg>
+                </button>
+                <div class="faq-answer px-6 pb-6 pt-0 hidden">
+                  <p class="text-gray-600">
+                    Puedes contactar con nuestro equipo de atención al cliente a través de varios canales:
+                  </p>
+                  <ul class="list-disc pl-5 mt-3 space-y-2 text-gray-600">
+                    <li><strong>Chat en vivo:</strong> Disponible en nuestra plataforma de lunes a viernes de 9:00 a 18:00 (hora local)</li>
+                    <li><strong>Email:</strong> soporte@gaiax.com (respuesta en 24 horas)</li>
+                    <li><strong>Teléfono:</strong> +34 900 123 456 (planes Business y Enterprise)</li>
+                    <li><strong>Centro de ayuda:</strong> help.gaiax.com con artículos, tutoriales y preguntas frecuentes</li>
+                  </ul>
+                  <p class="text-gray-600 mt-3">
+                    También puedes solicitar una llamada programada con un especialista en soporte a través de nuestro formulario de contacto.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Sección de contacto para más preguntas -->
+          <div class="mt-16 text-center">
+            <h3 class="text-2xl font-semibold text-gray-900 mb-4">¿No encuentras lo que buscas?</h3>
+            <p class="text-lg text-gray-600 mb-8">
+              Contacta con nosotros y responderemos a todas tus preguntas.
+            </p>
+            <a href="/contacto" class="btn btn-primary py-3 px-8 hover-lift inline-flex items-center">
+              Contactar ahora
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <Footer />
+</Layout>
+
+<script>
+  // Funcionalidad de pestañas (tabs)
+  const tabs = document.querySelectorAll('.faq-tab');
+  const categories = document.querySelectorAll('.faq-category');
+  
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      // Desactivar todas las pestañas
+      tabs.forEach(t => t.classList.remove('active', 'bg-primary', 'text-white'));
+      tabs.forEach(t => t.classList.add('bg-white', 'text-gray-800'));
+      
+      // Activar la pestaña clickada
+      tab.classList.add('active', 'bg-primary', 'text-white');
+      tab.classList.remove('bg-white', 'text-gray-800');
+      
+      // Ocultar todas las categorías
+      categories.forEach(category => {
+        category.classList.add('hidden');
+        category.classList.remove('active');
+      });
+      
+      // Mostrar la categoría correspondiente
+      const targetId = tab.getAttribute('data-target');
+      if (targetId) {
+        const targetCategory = document.getElementById(targetId);
+        if (targetCategory) {
+          targetCategory.classList.remove('hidden');
+          targetCategory.classList.add('active');
+        }
+      }
+    });
+  });
+  
+  // Funcionalidad de acordeón para las preguntas
+  const questions = document.querySelectorAll('.faq-question');
+  
+  questions.forEach(question => {
+    question.addEventListener('click', () => {
+      const answer = question.nextElementSibling;
+      const icon = question.querySelector('.faq-icon');
+      
+      // Alternar estado
+      if (answer && icon) {
+        if (answer.classList.contains('hidden')) {
+          // Cerrar todas las respuestas primero
+          document.querySelectorAll('.faq-answer').forEach(a => {
+            a.classList.add('hidden');
+            const parent = a.previousElementSibling;
+            if (parent) {
+              const i = parent.querySelector('.faq-icon');
+              if (i) i.classList.remove('rotate-180');
+            }
+          });
+          
+          // Abrir esta respuesta
+          answer.classList.remove('hidden');
+          icon.classList.add('rotate-180');
+        } else {
+          // Cerrar esta respuesta
+          answer.classList.add('hidden');
+          icon.classList.remove('rotate-180');
+        }
+      }
+    });
+  });
+  
+  // Inicializar la primera pregunta de la categoría activa como abierta
+  const firstCategory = document.querySelector('.faq-category.active');
+  if (firstCategory) {
+    const firstQuestion = firstCategory.querySelector('.faq-question');
+    if (firstQuestion) {
+      const firstAnswer = firstQuestion.nextElementSibling;
+      const firstIcon = firstQuestion.querySelector('.faq-icon');
+      
+      if (firstAnswer && firstIcon) {
+        firstAnswer.classList.remove('hidden');
+        firstIcon.classList.add('rotate-180');
+      }
+    }
+  }
+</script>
+
+<style>
+  .faq-tab.active {
+    background-color: #a92eff;
+    color: white;
+  }
+  
+  .faq-question:hover {
+    background-color: rgba(0, 0, 0, 0.01);
+  }
+  
+  .faq-icon {
+    transition: transform 0.3s ease;
+  }
+  
+  .hover-lift {
+    transition: transform 0.15s ease;
+  }
+  
+  .hover-lift:hover {
+    transform: translateY(-2px);
+  }
+</style> 

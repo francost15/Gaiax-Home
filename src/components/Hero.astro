@@ -1,0 +1,141 @@
+<section class="pt-32 pb-20 md:pt-48 md:pb-32">
+  <div class="container">
+    <div class="max-w-5xl mx-auto text-center animate-fade-in-up">
+      <h1 class="heading-1 mb-6 text-gray-900 leading-tight">
+        Potencia tu equipo con <br />
+        <span class="text-primary inline-block js-typing-container">
+          <span class="js-typing"></span>
+        </span>
+      </h1>
+      <p class="body-large mt-8 text-gray-600 max-w-3xl mx-auto">
+        Transforma la capacitación tradicional en rutas de aprendizaje adaptativas, diseñadas para las necesidades
+        únicas de cada empleado.
+      </p>
+      <div class="mt-12 flex flex-col sm:flex-row justify-center gap-6">
+        <a href="#contacto" class="btn btn-primary text-lg py-4 px-8 hover-lift">Comienza ahora</a>
+        <a href="#features" class="btn btn-outline text-lg py-4 px-8 hover-lift">Saber más</a>
+      </div>
+    </div>
+
+    <div class="mt-24 max-w-6xl mx-auto relative animate-fade-in-up delay-300">
+      <div class="aspect-video rounded-2xl overflow-hidden shadow-2xl shadow-primary/10 border border-gray-200">
+        <img
+          src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80"
+          alt="Platform Dashboard"
+          class="w-full h-full object-cover"
+          loading="eager"
+          fetchpriority="high"
+        />
+        <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+      </div>
+      <div class="absolute -bottom-8 -right-8 bg-white rounded-xl shadow-lg p-6 flex items-center gap-4 border border-gray-100 animate-scale-in delay-700">
+        <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary">
+            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+            <polyline points="22 4 12 14.01 9 11.01"></polyline>
+          </svg>
+        </div>
+        <div>
+          <p class="text-lg font-semibold text-gray-900">Personalizado para cada empleado</p>
+          <p class="text-base text-gray-500">Rutas de aprendizaje adaptativas</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-32 flex justify-center">
+      <a
+        href="#features"
+        class="flex flex-col items-center text-gray-400 hover:text-primary transition-colors hover-lift"
+      >
+        <span class="text-base font-medium mb-2">Descubre más</span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="6 9 12 15 18 9"></polyline>
+        </svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<script>
+  // Efecto de escritura automática
+  const texts = [
+    "aprendizaje personalizado",
+    "desarrollo continuo",
+    "crecimiento profesional",
+    "formación adaptativa",
+    "mejora de habilidades"
+  ];
+  
+  let textIndex = 0;
+  let charIndex = 0;
+  let isDeleting = false;
+  const typingElement = document.querySelector('.js-typing');
+  const typingSpeed = 50;
+  const pauseTime = 2000;
+  const deleteSpeed = 30;
+  
+  function typeEffect() {
+    if (!typingElement || !(typingElement instanceof HTMLElement)) return;
+    
+    const currentText = texts[textIndex];
+    
+    if (isDeleting) {
+      typingElement.textContent = currentText.substring(0, charIndex - 1);
+      charIndex--;
+    } else {
+      typingElement.textContent = currentText.substring(0, charIndex + 1);
+      charIndex++;
+    }
+    
+    if (!isDeleting && charIndex === currentText.length) {
+      // Pausa al final del texto
+      isDeleting = true;
+      setTimeout(typeEffect, pauseTime);
+      return;
+    }
+    
+    if (isDeleting && charIndex === 0) {
+      isDeleting = false;
+      textIndex = (textIndex + 1) % texts.length;
+      setTimeout(typeEffect, 500);
+      return;
+    }
+    
+    setTimeout(
+      typeEffect, 
+      isDeleting ? deleteSpeed : typingSpeed
+    );
+  }
+  
+  // Iniciar el efecto de escritura
+  typeEffect();
+</script>
+
+<style>
+  .delay-300 {
+    animation-delay: 300ms;
+  }
+  
+  .delay-700 {
+    animation-delay: 700ms;
+  }
+  
+  .js-typing-container {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .js-typing::after {
+    content: "|";
+    position: relative;
+    right: 0;
+    margin-left: 2px;
+    opacity: 1;
+    animation: blink 1s infinite;
+  }
+  
+  @keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+  }
+</style> 

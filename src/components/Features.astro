@@ -1,0 +1,60 @@
+<section id="features" class="py-24 bg-white">
+  <div class="container">
+    <div class="max-w-3xl mx-auto text-center mb-16">
+      <h2 class="heading-2 text-gray-900 mb-6">
+        Diseñado para Lugares de Trabajo Modernos
+      </h2>
+      <p class="body-large text-gray-600">
+        Nuestra plataforma combina tecnología de vanguardia con metodologías de aprendizaje probadas
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div class="bg-gradient-to-br from-primary/80 to-primary text-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+        <div class="text-5xl mb-6">📈</div>
+        <h3 class="text-2xl font-semibold mb-4">Impulsa el Crecimiento</h3>
+        <p class="text-lg text-white/90">
+          Transforma el potencial de tu equipo en resultados tangibles, acelerando el desarrollo profesional y el éxito de tu empresa.
+        </p>
+      </div>
+
+      <div class="bg-gradient-to-br from-primary/70 to-primary/90 text-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+        <div class="text-5xl mb-6">🧠</div>
+        <h3 class="text-2xl font-semibold mb-4">Adapta el Aprendizaje</h3>
+        <p class="text-lg text-white/90">
+          Personaliza la formación a las necesidades únicas de cada empleado, maximizando la retención y aplicación de conocimientos.
+        </p>
+      </div>
+
+      <div class="bg-gradient-to-br from-primary/60 to-primary text-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+        <div class="text-5xl mb-6">🎯</div>
+        <h3 class="text-2xl font-semibold mb-4">Mide el Impacto</h3>
+        <p class="text-lg text-white/90">
+          Visualiza el progreso en tiempo real y toma decisiones informadas para optimizar el rendimiento de tu equipo y tu inversión.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  // Animación al hacer scroll
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('animate-fade-in-up');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+
+  // Elementos a animar
+  const featureCards = document.querySelectorAll('#features .grid > div');
+  featureCards.forEach((card, index) => {
+    if (card instanceof HTMLElement) {
+      card.style.opacity = '0';
+      card.style.animationDelay = `${index * 150}ms`;
+      observer.observe(card);
+    }
+  });
+</script> 

@@ -1,0 +1,16 @@
+---
+import Icons from './Icons.astro';
+
+interface Props {
+  class?: string;
+  width?: string | number;
+  height?: string | number;
+}
+
+const props = Astro.props;
+---
+
+<Icons {...props}>
+  <path d="M5 12h14"></path>
+  <path d="M12 5l7 7-7 7"></path>
+</Icons> 
