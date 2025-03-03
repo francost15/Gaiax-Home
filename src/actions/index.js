@@ -25,8 +25,8 @@ export const server = {
       try {
         // Enviar correo electrónico
         const { data, error } = await resend.emails.send({
-          from: 'Gaiax <noreply@gaiax.mx>', // Ajusta según tu dominio verificado
-          to: ['contacto@gaiax.mx'], // Email donde recibirás los mensajes
+          from: 'Franco Sanchez <franco.sanchez@gaiax.mx>', // Ajusta según tu dominio verificado
+          to: ['francost15@gmail.com'], // Email donde recibirás los mensajes
           reply_to: email.toString(),
           subject: `Nuevo contacto desde la web - ${nombre}`,
           html: `
