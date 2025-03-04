@@ -1,33 +1,6 @@
 ---
-// Componente de sección de contacto
-import { server } from '../actions/index.ts';
-
-// Procesar el formulario si hay un envío
-let formResult: { 
-  errors: any; 
-  success: boolean; 
-  message: undefined | string 
-} = { errors: undefined, success: false, message: undefined };
-
-if (Astro.request.method === 'POST') {
-  try {
-    const formData = await Astro.request.formData();
-    const result = await server.enviarContacto(formData);
-    
-    // Adaptamos el resultado al formato que espera nuestro componente
-    if (result.error) {
-      formResult.errors = { global: { message: result.error.message } };
-    } else if (result.data) {
-      formResult.success = result.data.success;
-      formResult.message = result.data.message;
-    }
-  } catch (error) {
-    console.error('Error al procesar el formulario:', error);
-    formResult.errors = { global: { message: 'Error al procesar el formulario' } };
-  }
-}
-
-const { errors, success, message } = formResult;
+// Eliminar la lógica de envío de correos y validaciones
+// const { errors, success, message } = formResult;
 ---
 
 <section id="contacto" class="py-24 bg-gray-50">
@@ -120,42 +93,6 @@ const { errors, success, message } = formResult;
       <div class="md:col-span-3 bg-white p-8 rounded-2xl shadow-sm">
         <h3 class="text-2xl font-semibold text-gray-900 mb-6">Envíanos un mensaje</h3>
         
-        <!-- Mensaje de éxito -->
-        {success && (
-          <div class="mb-6 p-4 bg-green-50 border border-green-200 rounded-lg">
-            <div class="flex">
-              <div class="flex-shrink-0">
-                <svg class="h-5 w-5 text-green-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                </svg>
-              </div>
-              <div class="ml-3">
-                <p class="text-sm font-medium text-green-800">
-                  {message || '¡Gracias por tu mensaje! Te contactaremos pronto.'}
-                </p>
-              </div>
-            </div>
-          </div>
-        )}
-        
-        <!-- Mensaje de error general -->
-        {errors?.global && (
-          <div class="mb-6 p-4 bg-red-50 border border-red-200 rounded-lg">
-            <div class="flex">
-              <div class="flex-shrink-0">
-                <svg class="h-5 w-5 text-red-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd" />
-                </svg>
-              </div>
-              <div class="ml-3">
-                <p class="text-sm font-medium text-red-800">
-                  {errors.global?.message}
-                </p>
-              </div>
-            </div>
-          </div>
-        )}
-        
         <form id="contactForm" method="post" action="#contacto" class="space-y-6">
           <div class="grid md:grid-cols-2 gap-6">
             <div>
@@ -164,13 +101,10 @@ const { errors, success, message } = formResult;
                 type="text" 
                 id="nombre" 
                 name="nombre" 
-                class={`w-full px-4 py-3 border ${errors?.nombre ? 'border-red-500' : 'border-gray-300'} rounded-lg focus:ring-primary focus:border-primary transition-colors`}
+                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-primary focus:border-primary transition-colors"
                 placeholder="Escribe tu nombre"
                 required
               />
-              {errors?.nombre && (
-                <div class="text-red-500 text-sm mt-1">{errors.nombre?.message}</div>
-              )}
             </div>
             
             <div>
@@ -192,13 +126,10 @@ const { errors, success, message } = formResult;
                 type="email" 
                 id="email" 
                 name="email" 
-                class={`w-full px-4 py-3 border ${errors?.email ? 'border-red-500' : 'border-gray-300'} rounded-lg focus:ring-primary focus:border-primary transition-colors`}
+                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-primary focus:border-primary transition-colors"
                 placeholder="correo@ejemplo.com"
                 required
               />
-              {errors?.email && (
-                <div class="text-red-500 text-sm mt-1">{errors.email?.message}</div>
-              )}
             </div>
             
             <div>
@@ -219,13 +150,10 @@ const { errors, success, message } = formResult;
               id="mensaje" 
               name="mensaje" 
               rows="4" 
-              class={`w-full px-4 py-3 border ${errors?.mensaje ? 'border-red-500' : 'border-gray-300'} rounded-lg focus:ring-primary focus:border-primary transition-colors`}
+              class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-primary focus:border-primary transition-colors"
               placeholder="Cuéntanos en qué podemos ayudarte..."
               required
             ></textarea>
-            {errors?.mensaje && (
-              <div class="text-red-500 text-sm mt-1">{errors.mensaje?.message}</div>
-            )}
           </div>
           
           <div class="flex items-center">
@@ -258,26 +186,6 @@ const { errors, success, message } = formResult;
     </div>
   </div>
 </section>
-
-<script>
-  // JavaScript para mostrar estado de envío y validación adicional
-  const form = document.getElementById('contactForm');
-  const submitBtn = document.getElementById('submitBtn') as HTMLButtonElement;
-  
-  if (form && submitBtn) {
-    form.addEventListener('submit', () => {
-      // Cambiar texto del botón
-      const btnText = submitBtn.querySelector('span');
-      if (btnText) {
-        btnText.textContent = 'Enviando...';
-      }
-      
-      // Deshabilitar botón durante el envío
-      submitBtn.disabled = true;
-      submitBtn.classList.add('opacity-70', 'cursor-not-allowed');
-    });
-  }
-</script>
 
 <style>
   /* Enfoque personalizado para campos */
