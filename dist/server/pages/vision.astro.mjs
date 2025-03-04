@@ -1,0 +1,27 @@
+/* empty css                                     */
+import { e as createComponent, i as renderComponent, r as renderTemplate, m as maybeRenderHead } from '../chunks/astro/server_ax9D0Zyw.mjs';
+import 'kleur/colors';
+import { $ as $$Layout, a as $$Footer } from '../chunks/Footer_2aS_Gt-Q.mjs';
+import { $ as $$Header } from '../chunks/Header_ozcRQeEm.mjs';
+export { renderers } from '../renderers.mjs';
+
+const $$Vision = createComponent(($$result, $$props, $$slots) => {
+  return renderTemplate`${renderComponent($$result, "Layout", $$Layout, { "title": "Nuestra Visi\xF3n | Gaiax", "description": "Conoce la visi\xF3n de Gaiax: Ser la plataforma l\xEDder en formaci\xF3n adaptativa para pymes a nivel global, transformando la capacitaci\xF3n empresarial." }, { "default": ($$result2) => renderTemplate` ${renderComponent($$result2, "Header", $$Header, {})} ${maybeRenderHead()}<main class="pt-20"> <section class="py-24 bg-gray-50"> <div class="container"> <div class="max-w-4xl mx-auto text-center mb-16"> <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+Nuestra <span class="text-primary">Visión</span> </h1> <div class="w-24 h-1 bg-primary mx-auto mb-8 rounded-full"></div> </div> <div class="max-w-3xl mx-auto"> <div class="bg-white rounded-2xl shadow-xl p-8 md:p-12 relative overflow-hidden"> <!-- Elemento decorativo --> <div class="absolute -top-10 -right-10 w-40 h-40 bg-primary/5 rounded-full"></div> <div class="absolute -bottom-10 -left-10 w-40 h-40 bg-primary/5 rounded-full"></div> <div class="relative z-10"> <p class="text-xl md:text-2xl text-gray-700 leading-relaxed mb-12">
+"Ser la plataforma líder en formación adaptativa para pymes a nivel global, transformando la capacitación en una experiencia dinámica, personalizada y medible, que genere un impacto positivo en la competitividad y crecimiento de las empresas."
+</p> <div class="grid md:grid-cols-2 gap-8 mt-12"> <div class="bg-gray-50 p-6 rounded-xl hover:shadow-md transition-shadow"> <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4"> <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path> </svg> </div> <h3 class="text-lg font-semibold text-gray-900 mb-2">Liderazgo Global</h3> <p class="text-gray-600">Aspiramos a ser reconocidos mundialmente como la solución preferida de capacitación para pequeñas y medianas empresas.</p> </div> <div class="bg-gray-50 p-6 rounded-xl hover:shadow-md transition-shadow"> <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4"> <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122"></path> </svg> </div> <h3 class="text-lg font-semibold text-gray-900 mb-2">Formación Personalizada</h3> <p class="text-gray-600">Creamos experiencias de aprendizaje únicas adaptadas a las necesidades específicas de cada empleado y empresa.</p> </div> <div class="bg-gray-50 p-6 rounded-xl hover:shadow-md transition-shadow"> <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4"> <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path> </svg> </div> <h3 class="text-lg font-semibold text-gray-900 mb-2">Resultados Medibles</h3> <p class="text-gray-600">Proporcionamos métricas claras y datos accionables para demostrar el impacto real del aprendizaje en los resultados empresariales.</p> </div> <div class="bg-gray-50 p-6 rounded-xl hover:shadow-md transition-shadow"> <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4"> <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"></path> </svg> </div> <h3 class="text-lg font-semibold text-gray-900 mb-2">Impacto Positivo</h3> <p class="text-gray-600">Generamos un efecto multiplicador en la competitividad y el crecimiento sostenible de las pymes a nivel global.</p> </div> </div> </div> </div> </div> </div> </section> </main> ${renderComponent($$result2, "Footer", $$Footer, {})} ` })}`;
+}, "C:/Users/stfra/OneDrive/Documentos/gaiax-landing/src/pages/vision.astro", void 0);
+
+const $$file = "C:/Users/stfra/OneDrive/Documentos/gaiax-landing/src/pages/vision.astro";
+const $$url = "/vision";
+
+const _page = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
+  __proto__: null,
+  default: $$Vision,
+  file: $$file,
+  url: $$url
+}, Symbol.toStringTag, { value: 'Module' }));
+
+const page = () => _page;
+
+export { page };
